@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block title %} Create MadLib {% endblock %} {%
+block content %}
+
+<h4>Fill in the spaces below to generate your Mad Libs</h4>
+{% if chosen_story == "story1"%}
+<form action="/story1">
+  {% endif %} {% if chosen_story == "story2"%}
+  <form action="/story2">
+    {% endif %} {% for prompt in prompts%}
+    <label for="{{prompt}}"> {{prompt}} : </label>
+    <input type="text" name="{{prompt}}" id="" /> <br />
+
+    {% endfor %}
+
+    <button>GENERATE MADLIB</button>
+  </form>
+  {% endblock %}
+</form>

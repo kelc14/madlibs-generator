@@ -1,0 +1,57 @@
+.navbar {
+  background-color: black;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+}
+.navbar a:hover {
+  color: rgb(12, 163, 214);
+}
+
+h4 {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.container {
+  height: 10rem;
+  position: relative;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.dropdown a {
+  background-color: rgb(12, 163, 214);
+}
+.dropdown-color {
+  background-color: rgb(12, 163, 214);
+  color: white;
+}
+
+form {
+  padding: 10px;
+}
+
+input {
+  width: 40%;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding: 5px;
+}
+
+#story-box {
+  background-color: rgb(12, 163, 214, 0.5);
+  color: black;
+  width: 50%;
+  margin: 0 auto;
+  padding: 5px;
+}
