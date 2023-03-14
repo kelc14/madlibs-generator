@@ -1,18 +1,108 @@
-.navbar {
-  background-color: black;
+:root {
+  /* theme colors */
+  --bg-color: hsl(194, 100%, 90%);
+
+  --bright-1-color: hsl(49, 100%, 50%);
+  --bright-2-color: hsl(155, 100%, 49%);
+  --bright-3-color: hsl(194, 100%, 50%);
+  --bright-4-color: hsl(273, 100%, 50%);
+  --bright-5-color: hsl(318, 100%, 50%);
+
+  --light-1-color: hsl(49, 100%, 60%);
+  --light-2-color: hsl(155, 100%, 59%);
+  --light-3-color: hsl(194, 100%, 60%);
+  --light-4-color: hsl(273, 100%, 60%);
+  --light-5-color: hsl(318, 100%, 60%);
+}
+html,
+body {
+  background-color: var(--bg-color);
+  height: 100%;
+  width: 100%;
+}
+/* home btn */
+
+#home-btn {
+  position: absolute;
+  border-radius: 5px;
+  background-color: var(--bright-3-color);
   color: white;
+
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+}
+#home-btn i {
+  color: white;
+  font-size: 40px;
+}
+/* madlibs logo */
+.img-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  overflow: hidden;
+}
+#madlibs-logo {
+  margin: 0 auto;
+  height: clamp(40px, 120px, 150px);
+  overflow: hidden;
 }
 
-.navbar a {
-  color: white;
-}
-.navbar a:hover {
-  color: rgb(12, 163, 214);
+/* madlib containers */
+
+#form-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+.madlib-container {
+  width: 33%;
+  padding-bottom: 33%;
+}
+
+.madlib-container:nth-child(5n + 1) {
+  background-color: var(--bright-1-color);
+}
+.madlib-container:nth-child(5n + 2) {
+  background-color: var(--bright-2-color);
+}
+.madlib-container:nth-child(5n + 3) {
+  background-color: var(--bright-3-color);
+}
+.madlib-container:nth-child(5n + 4) {
+  background-color: var(--bright-4-color);
+}
+.madlib-container:nth-child(5n + 5) {
+  background-color: var(--bright-5-color);
+}
+
+.madlib-container button {
+  /* display: none; */
+  text-align: center;
+  font-size: clamp(1rem, 1.5rem, 2rem);
+  border: none;
+  position: absolute;
+  margin: 0 auto;
+  word-wrap: normal;
+  overflow: hidden;
+}
+
+.madlib-container button:hover {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: aqua;
+}
+
+/* home screen */
 h4 {
   padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
+  overflow-wrap: normal;
 }
 
 .container {

@@ -1,30 +1,25 @@
 {% extends 'base.html' %} {% block title %}Home Page{% endblock %} {% block
 content %}
 <h4>Create Your Own MadLibs! Let's get started...</h4>
-<section class="container">
-  <section class="vertical-center">
-    <div class="dropdown dropdown-color">
-      <a
-        class="btn btn-secondary dropdown-toggle"
-        href="#"
-        role="button"
-        id="dropdownMenuLink"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-      >
-        Pick Your Story to Begin!
-      </a>
 
-      <div
-        class="dropdown-menu dropdown-color"
-        aria-labelledby="dropdownMenuLink"
-      >
-        <a class="dropdown-item" href="/form?s=story1">Story 1</a>
-        <a class="dropdown-item" href="/form?s=story2">Story 2</a>
-      </div>
+<!-- <form action="/form">
+  <label for="story">Choose Your Adventure</label>
+  <select name="story_id" id="story">
+    {% for (k, v) in stories.items() %}
+    <option value="{{k}}">{{v}}</option>
+    {% endfor %}
+  </select>
+  <input type="submit" value="Submit" />
+</form> -->
+
+<form action="/form">
+  <div id="form-container">
+    {% for (k, v) in stories.items() %}
+    <div class="madlib-container">
+      <button value="{{k}}">{{v}}</button>
     </div>
-  </section>
-</section>
+    {% endfor %}
+  </div>
+</form>
 
 {% endblock %}
